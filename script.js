@@ -65,3 +65,50 @@ function displayCart() {
 
   totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
 }
+
+/*    JavaScript for Navigation and Sliders  ***********************************************************************/
+
+
+// Product Data (Simulated)
+const products = [
+    { id: 1, name: 'Product 1', price: 10, images: ['images/product1.jpg', 'images/product1-2.jpg'] },
+    { id: 2, name: 'Product 2', price: 20, images: ['images/product2.jpg', 'images/product2-2.jpg'] },
+    { id: 3, name: 'Product 3', price: 30, images: ['images/product3.jpg', 'images/product3-2.jpg'] },
+];
+
+// let cart = [];
+let currentSlide = 0;
+
+// Handle View Details Click
+document.querySelectorAll('.view-details').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const productId = e.target.dataset.id;
+        window.location.href = `product-details.html?id=${productId}`;
+    });
+});
+
+// Load Product Details on Details Page
+function loadProductDetails() {
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('id');
+    const product = products.find(p => p.id == productId);
+
+    if (product) {
+        document.getElementById('product-name').textContent = product.name;
+        document.getElementById('product-price').textContent = `$${product.price}`;
+        document.getElementById('slider-img').src = product.images[0];
+    }
+}
+
+// Slider Navigation
+document.getElementById('next-slide').addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % products[0].images.length;
+    document.getElementById('slider-img').src = products[0].images[currentSlide];
+});
+
+// Add to Cart
+document.getElementById('add-to-cart').addEventListener('click', () => {
+    cart.push(products[0]);
+    alert('Product added to cart!');
+});
+  
