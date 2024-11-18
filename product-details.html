@@ -4,28 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Details</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="product-details.css">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="logo">MyShop</div>
-    <button id="cart-btn">Cart (0)</button>
+    <div class="logo">
+        <img src="./public/images/myLogo.png" alt="Logo">
+        <h1>Goods</h1>
+    </div>
+    <div class="nav">
+      <button id="cart-btn">Cart (0)</button>
+    </div>
   </header>
 
   <!-- Product Details Section -->
   <section class="product-details">
-    <div class="slider">
-      <img id="slider-img" src="images/product1.jpg" alt="Product Image">
+    <!-- <div class="slider">
       <button id="prev-slide">Previous</button>
+      <img id="slider-img" src="./public/images/cutlary-set/s-zoom.file" alt="Product Image">
+      <img id="slider-img" src="./public/images/cutlary-set/s-zoom.file" alt="Product Image">
+      <img id="slider-img" src="./public/images/cutlary-set/s-zoom.file" alt="Product Image">
+      <img id="slider-img" src="./public/images/cutlary-set/s-zoom.file" alt="Product Image">
+      <img id="slider-img" src="./public/images/cutlary-set/s-zoom.file" alt="Product Image">
+      <img id="slider-img" src="./public/images/cutlary-set/s-zoom.file" alt="Product Image">
+      <img id="slider-img" src="./public/images/cutlary-set/s-zoom.file" alt="Product Image">
+      <img id="slider-img" src="./public/images/cutlary-set/s-zoom.file" alt="Product Image">
       <button id="next-slide">Next</button>
+    </div> -->
+
+    <!-- Container for the image gallery -->
+    <div class="container">
+        <!-- Thumbnail images -->
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="public/images/cutlary-set/s-zoom.file" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/cutlary-set/s-zoom (1).file" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/cutlary-set/s-zoom (2).file" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/cutlary-set/s-zoom (3).file" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/cutlary-set/s-zoom (4).file" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="public/images/cutlary-set/s-zoom (5).file" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+            </div>
+        </div>
+
+
+        <!-- Full-width images with number text -->
+        <div class="slides-container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="public/images/cutlary-set/s-zoom.file" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="public/images/cutlary-set/s-zoom (1).file" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="public/images/cutlary-set/s-zoom (2).file" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="public/images/cutlary-set/s-zoom (3).file" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="public/images/cutlary-set/s-zoom (4).file" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="public/images/cutlary-set/s-zoom (5).file" style="width:100%">
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+        
     </div>
 
     <div class="product-info">
       <h1 id="product-name">Product 1</h1>
       <p id="product-price">$10.00</p>
       <p id="product-description">This is a high-quality product that meets all your needs.</p>
-      <p><strong>What’s in the box:</strong> 1x Product, 1x User Manual</p>
+      <p><strong>What's in the box:</strong> 1x Product, 1x User Manual</p>
       <button id="add-to-cart">Add to Cart</button>
     </div>
   </section>
@@ -35,12 +116,28 @@
     <h2>Recommended Products</h2>
     <div class="recommended-list">
       <div class="recommended-card">
-        <img src="images/product2.jpg" alt="Product 2">
+        <img src="./public/images/dinner-ware-set/s-zoom (1).file" alt="Product 2">
         <p>Product 2 - $20.00</p>
       </div>
       <div class="recommended-card">
-        <img src="images/product3.jpg" alt="Product 3">
-        <p>Product 3 - $30.00</p>
+        <img src="./public/images/dinner-ware-set/s-zoom (2).file" alt="Product 2">
+        <p>Product 2 - $20.00</p>
+      </div>
+      <div class="recommended-card">
+        <img src="./public/images/dinner-ware-set/s-zoom (3).file" alt="Product 2">
+        <p>Product 2 - $20.00</p>
+      </div>
+      <div class="recommended-card">
+        <img src="./public/images/dinner-ware-set/s-zoom (4).file" alt="Product 2">
+        <p>Product 2 - $20.00</p>
+      </div>
+      <div class="recommended-card">
+        <img src="./public/images/dinner-ware-set/s-zoom (5).file" alt="Product 2">
+        <p>Product 2 - $20.00</p>
+      </div>
+      <div class="recommended-card">
+        <img src="./public/images/dinner-ware-set/s-zoom (6).file" alt="Product 2">
+        <p>Product 2 - $20.00</p>
       </div>
     </div>
   </section>
@@ -55,6 +152,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="product-details.js"></script>
 </body>
 </html>

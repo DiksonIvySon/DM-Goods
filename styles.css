@@ -11,27 +11,74 @@ body {
   
 /* Header Styles */
 .header {
+    background-color: #333;
+    background: linear-gradient(100deg,gray, #333,gray);
+    color: white;
+    padding: 0px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2874f0;
-    color: white;
-    padding: 15px 20px;
 }
 
 .header .logo {
-    font-size: 24px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-.nav button {
-    background-color: #fff;
-    color: #2874f0;
+.header .logo img{
+    max-width: 70px;
+    margin: 0px;
+}
+
+.header .logo h1{
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    margin: 0px;
+}
+
+button {
+    background-color: #000000;
+    color: #e2ded5;
     border: none;
     border-radius: 5px;
     padding: 8px 15px;
     margin-left: 10px;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover {
+    background: url(./public/images/gold-background3.jpeg) no-repeat center center/cover;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.cart-btn {
+    font-size: 14px;
+    padding: 5px;
+}
+
+/* .cart-btn .fa-solid {
+    position: relative;
+} */
+
+.cart-btn span {
+    /* position: absolute; */
+    /* bottom: -15px;
+    right: -4px; */
+    background-color: burlywood;
+    border-radius: 1px 10px;
+    padding-inline: 5px;
+    width: 40px;
+    height: 20px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 /* Page Layout */
@@ -63,11 +110,11 @@ body {
     flex-wrap: wrap;
 }
 
-.product-card {
-    background-color: white;
-    padding: 15px;
+.product-card { 
+    background: linear-gradient(130deg, gray, gray, #eae5db );
+    padding: 5px;
     margin: 10px;
-    width: 200px;
+    width: 250px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -76,16 +123,6 @@ body {
 .product-card img {
     width: 100%;
     border-radius: 8px;
-}
-
-.product-card button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #2874f0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 /* Footer Styles */
@@ -113,25 +150,26 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.header {
-    background-color: #2874f0;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .product-list, .product-details, .recommended-slider {
     padding: 20px;
 }
 
-.product-card, .recommended-card {
+.recommended-list {
+    display: flex;
+}
+
+.recommended-card {
     margin: 10px;
-    padding: 10px;
-    background-color: white;
+    max-width: 200px;
+    max-height: 300px;
+    padding: 3px 3px 10px 3px;
+    background-color: gray;
     border-radius: 8px;
     text-align: center;
+}
+
+.recommended-card img {
+    width: 100%;
 }
 
 .slider {
@@ -143,13 +181,6 @@ body {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
 }
 
 /************************************************************/
